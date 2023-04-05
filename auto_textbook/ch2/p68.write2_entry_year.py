@@ -26,28 +26,27 @@ sheet.column_dimensions['C'].width=20
 for i in range(50):
     # 기준 출생 연도
     birth_year = 2002 - i
-    birth_year = thisyear - i
-    korean_age = thisyear - birth_year + 1  # 세는 나이는 1살 부터 시작
-    man_age = {'after_bday': korean_age-1, 'before_bday':korean_age-2}
 
-    # 셀을 읽어 값을 설정하기
-    year_cell = sheet.cell(row=i+2, column=1)   # i 는 0 부터 시작이므로 + 2 해줌
-    year_cell.value = str(birth_year) + "년생"
+    # 출생기간 문자열 설정
+    birth_range = "{}년 3월 1일생 ~ {}년 2월 28(29)일생".format(birth_year, birth_year+1)
 
-    age_cell = sheet.cell(row=i+2, column=2)
-    age_cell.value = str(korean_age) + "세"
+    # 초등학교 입학 연도 계산
+    ele_year = birth_year + 7
 
-    age_cell = sheet.cell(row=i+2, column=3)
-    age_cell.value = "만 " + str(man_age['after_bday']) + "세"
+    # 대학교 학번 계산
+    univ_year = birth_year + 19
+    univ_num = str(univ_year)[2:]
 
-    age_cell = sheet.cell(row=i+2, column=4)
-    age_cell.value = "만 " + str(man_age['before_bday']) + "세"
+    # 셀을 지정해 값을 설정하기
+    sheet.cell(row=i+2, column=1, value= birth_range)
+    sheet.cell(row=i + 2, column=2, value=str(ele_year) + "년")
+    sheet.cell(row=i + 2, column=3, value=univ_num + "학번")
 
 # 예외 경우 처리
-sheet["D2"] = "-"
+sheet["A2"] = "2002년 3월 1일생 ~ 2002년 12월 31일생"
 
 # 파일 (워크북) 저장
-book.save('write2_agelist.xlsx')
+book.save('write2_entry_year.xlsx')
 
 print('--------------------')
 
