@@ -55,7 +55,7 @@ for i in range(100):
     print(year, '=', gangi, ",", col_ani)
 
 # 파일 (워크북) 저장
-book.save('write2_ganji.xlsx')
+book.save('output/write2_ganji.xlsx')
 
 print('--------------------')
 

@@ -46,7 +46,7 @@ for i in range(80):
 sheet["D2"] = "-"
 
 # 파일 (워크북) 저장
-book.save('write2_agelist.xlsx')
+book.save('output/write2_agelist.xlsx')
 
 print('--------------------')
 

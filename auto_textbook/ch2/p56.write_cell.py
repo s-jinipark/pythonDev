@@ -23,4 +23,4 @@ third_cell.value = "낙숫물이 바위를 뚫는다"
 sheet.cell(4, 1, "테스트 가 테스트 했다.")
 
 # 워크북 저장
-book.save('write_cell.xlsx')
+book.save('output/write_cell.xlsx')

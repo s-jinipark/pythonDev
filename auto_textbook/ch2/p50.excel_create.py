@@ -13,12 +13,12 @@ sheet = book.active
 sheet["A1"] = "안녕하세요"
 
 # 파일 저장
-book.save('hello.xlsx')
+book.save('output/hello.xlsx')
 
 print('--------------------')
 
 # 워크북 열기
-book2 = excel.load_workbook('hello.xlsx')
+book2 = excel.load_workbook('output/hello.xlsx')
 
 # 워크북에서 첫 번째 워크시트 가져오기
 sheet2 = book2.worksheets[0]

@@ -13,7 +13,7 @@ for i in range(10):
     sheet.cell(row=(i+1), column=1, value=i)
 
 # 파일 (워크북) 저장
-book.save('write_column.xlsx')
+book.save('output/write_column.xlsx')
 
 print('--------------------')
 
@@ -27,4 +27,4 @@ for i in range(1,10):
         cell = sheet2.cell(row=j, column=i)
         cell.value = i*j
 
-book2.save('write_9x9.xlsx')
+book2.save('output/write_9x9.xlsx')

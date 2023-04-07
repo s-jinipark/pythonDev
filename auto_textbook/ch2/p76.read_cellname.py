@@ -5,7 +5,7 @@ import openpyxl as excel
 
 
 # 워크북 열기
-book = excel.load_workbook('write_cellname.xlsx')
+book = excel.load_workbook('output/write_cellname.xlsx')
 # 워크시트 읽기
 sheet = book.active
 

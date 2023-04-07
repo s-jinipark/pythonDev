@@ -14,7 +14,7 @@ for y in range(1,101):
         cell.value = cell.coordinate   # 셀 주소 가져오기
 
 # 파일 (워크북) 저장
-book.save('write_cellname.xlsx')
+book.save('output/write_cellname.xlsx')
 
 print('--------------------')
 

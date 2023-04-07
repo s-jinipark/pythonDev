@@ -46,7 +46,7 @@ for i in range(50):
 sheet["A2"] = "2002년 3월 1일생 ~ 2002년 12월 31일생"
 
 # 파일 (워크북) 저장
-book.save('write2_entry_year.xlsx')
+book.save('output/write2_entry_year.xlsx')
 
 print('--------------------')
 
